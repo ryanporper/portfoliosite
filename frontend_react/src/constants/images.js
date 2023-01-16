@@ -16,6 +16,8 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import linkedin from '../assets/linkedin.png'
+import github from '../assets/github.png'
 
 import profile from '../assets/mypic.png';
 import circle from '../assets/circle.svg';
@@ -41,4 +43,6 @@ export default {
   vue,
   profile,
   circle,
+  linkedin,
+  github
 };

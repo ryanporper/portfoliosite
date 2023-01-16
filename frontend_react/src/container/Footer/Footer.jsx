@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
@@ -41,8 +40,16 @@ const Footer = () => {
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
+         <img src={images.linkedin} alt="linkedin" />
+          <a href="https://www.linkedin.com/in/ryan-porper/" target="_blank" rel="noopener noreferrer" className="p-text">LinkedIn</a>
+        </div>
+        <div className="app__footer-card ">
+         <img src={images.github} alt="github" />
+          <a href="https://github.com/ryanporper" target="_blank" rel="noopener noreferrer" className="p-text">GitHub</a>
+        </div>
+        <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">ryan_porper@aol.com</a>
+          <a href="mailto:ryan_porper@aol.com" className="p-text">ryan_porper@aol.com</a>
         </div>
       </div>
       {!isFormSubmitted ? (
