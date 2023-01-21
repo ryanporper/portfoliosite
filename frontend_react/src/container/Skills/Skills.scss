@@ -21,7 +21,7 @@
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
   
     margin-right: 5rem;
@@ -30,6 +30,10 @@
       margin-right: 0;
       justify-content: center;
       align-items: center;
+    }
+
+    h2{
+      text-align: center;
     }
   }
   
@@ -53,7 +57,7 @@
       }
   
       &:hover {
-        box-shadow: 0 0 25px #fef4f5;
+        box-shadow: 0 0 25px #7300d1;
       }
   
       @media screen and (min-width: 2000px) {

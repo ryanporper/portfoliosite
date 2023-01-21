@@ -5,39 +5,24 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './About.scss';
 
-const About = () => {
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data) => {
-      setAbouts(data);
-    })
-  }, [])
-
-  return (
-    <>
-      <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
-
-      <div className="app__profiles">
-        {abouts.map((about, index) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            className="app__profile-item"
-            key={about.title + index}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </>
-  );
-};
+const About = () => (
+  <motion.div
+    whileInView={{ scale: [0, 1] }}
+    transition={{ duration: 1.5, ease: 'easeInOut' }}
+  >
+    <h2 className="head-text">About <span>me</span></h2>
+    <p className="bold-text" style={{ marginTop: 10 }}>
+      Hi, my name is Ryan. I am a highly motivated software engineer graduate from  
+      <a href='https://www.codingdojo.com/online-coding-bootcamp-full-time' alt='coding dojo'> Coding Dojo. </a> 
+      Ever since I was a little kid I had an interest in coding. It all started from me playing videos games. I wondered how I could make one myself, so I googled it
+      and from there on began my journey into programming. After some time of messing with code myself I attending Palm Beach State College where I studied Computer Science to
+      ofically start my career path. After my adventures at PBSC I found Coding Dojo. They did not just seem like every other coding boot camp I have seen before. So I applied 
+      for their next cohort and got in! After a intuitive 14 week 3 stack program I graduated with a certificate in Software Developent. Since then I have continued to expand
+      my knowledge with my own research and projects. I work great in a team environments but I can also do great work alone. Very eager to grow and learn new things. Fast learner
+      and can easily adapt to my surroundings.
+    </p>
+  </motion.div>
+);
 
 export default AppWrap(
   MotionWrap(About, 'app__about'),
