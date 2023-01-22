@@ -4,4 +4,4 @@
 A website dedicated to displaying my portfolio. Built with React, Sanity CMS and Sass
 
 # Site Preview
-!(site preview)[https://i.imgur.com/2iT0pwo.png]
+![site preview](https://i.imgur.com/2iT0pwo.png)
