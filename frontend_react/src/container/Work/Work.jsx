@@ -10,7 +10,6 @@ const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
-  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -23,11 +22,8 @@ const Work = () => {
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
-    setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
-
       if (item === 'All') {
         setFilterWork(works);
       } else {
@@ -39,7 +35,7 @@ const Work = () => {
   return (
     <motion.div
       whileInView={{ scale: [0, 1] }}
-      transition={{ duration: 1.5, ease: 'easeInOut' }}
+      transition={{ duration: 1.0, ease: 'easeInOut' }}
     >
 
       <h2 className="head-text">My <span>Work</span></h2>

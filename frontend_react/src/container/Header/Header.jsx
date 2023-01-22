@@ -31,7 +31,7 @@ const Header = () => (
   <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1.0 }}
       className="app__header-info"
     >
       <div className="app__header-badge">
@@ -44,10 +44,8 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Web Developer 💻</p>
           <p className="p-text">Full-stack Developer 🖥️</p>
-          <p className="p-text">Frontend / Backend Developer 👨‍💻</p>
-        </div>      
+        </div>     
 
       </div>
     </motion.div>

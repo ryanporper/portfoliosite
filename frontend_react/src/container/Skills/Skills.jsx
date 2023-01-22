@@ -22,7 +22,7 @@ const Skills = () => {
         <motion.div 
           className="app__skills-list"
           whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1.5, ease: 'easeInOut' }}>
+          transition={{ duration: 1.0, ease: 'easeInOut' }}>
           {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}

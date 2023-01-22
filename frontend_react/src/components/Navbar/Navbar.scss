@@ -6,11 +6,10 @@
     align-items: center;
   
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.25);
-    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: #540297b2;
+    box-shadow: 0 8px 32px 0 rgba(101, 0, 160, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
   }
@@ -55,7 +54,7 @@
       }
   
       a {
-        color: var(--gray-color);
+        color: var(--white-color);
         text-decoration: none;
         flex-direction: column;
   
@@ -65,7 +64,7 @@
         transition: all 0.3s ease-in-out;
   
         &:hover {
-          color: var(--secondary-color);
+          color: var(--secondary-color);    
         }
       }
   
@@ -147,7 +146,7 @@
           margin: 1rem;
   
           a {
-            color: var(--gray-color);
+            color: var(--white-color);
             text-decoration: none;
             font-size: 1rem;
             text-transform: uppercase;
