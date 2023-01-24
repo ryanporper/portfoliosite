@@ -9,7 +9,6 @@ const App = () => {
     <div className='app'>
       <Navbar />
       <Header />
-      {/* <About /> */}
       <Work />
       <Skills />
       <Footer />
