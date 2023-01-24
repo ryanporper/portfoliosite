@@ -58,6 +58,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    padding-bottom: 75px;
   
     .badge-cmp,
     .tag-cmp {
@@ -80,8 +81,8 @@
   
       p {
         width: 100%;
-        text-transform: uppercase;
-        text-align: right;
+        // text-transform: uppercase;
+        text-align: left;
       }
     }
   

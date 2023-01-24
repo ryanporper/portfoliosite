@@ -40,12 +40,21 @@ const Header = () => (
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hi, My Name is</p>
             <h1 className="head-text">Ryan</h1>
+            {/* <p className="p-text">Full-stack Developer 🖥️</p> */}
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Full-stack Developer 🖥️</p>
-        </div>     
+          {/* <h2 className="head-text">Hi, my name is<span> Ryan</span></h2> */}
+          <p className="bold-text" style={{ marginTop: 10 }}>
+            I am a highly motivated software engineer graduate from Coding Dojo.
+            Ever since I was a little kid I had an interest in coding. It all started from me playing videos games. I wondered how I could make one myself, so I googled it
+            and from there on began my journey into programming. After some time of messing with code myself I attended Palm Beach State College where I studied Computer Science to
+            ofically start my career path. After my adventures at PBSC I found Coding Dojo. So I applied for their next cohort and got in! After a intuitive 14 week 3 stack program I 
+            graduated with a certificate in Software Development. Since then I have continued to expand my knowledge with my own research and projects. I work great in a team 
+            environments but I can also do amazing work alone. Very eager to grow and learn new things. Fast learner and can easily adapt to my surroundings.
+          </p>
+        </div>      
 
       </div>
     </motion.div>
