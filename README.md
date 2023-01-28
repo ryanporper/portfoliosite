@@ -5,7 +5,7 @@
 ## Deployed with AWS S3 [Live Site](http://ryan-porper.s3-website-us-east-1.amazonaws.com/)
 
 ## Built with:
-- React 
+- React.js
 - Sass 
 - Sanity CMS
 
