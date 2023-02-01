@@ -10,4 +10,4 @@
 - Sanity CMS
 
 # Site Preview
-![site preview](https://i.imgur.com/XpOdAo9.png
+![site preview](https://i.imgur.com/XpOdAo9.png)
