@@ -107,6 +107,6 @@ const Work = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Work, 'app__works'),
-  'work',
+  MotionWrap(Work, 'app__works', 'app__darkbg'),
+  'work', 'app__darkbg'
 );

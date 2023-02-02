@@ -16,8 +16,8 @@
     .app__work-filter-item {
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-      background-color: #fff;
-      color: #000;
+      background-color: var(--darkmode-color);
+      color: #FFF;
       font-weight: 800;
   
       cursor: pointer;
@@ -26,18 +26,19 @@
   
       &:hover {
         background-color: var(--secondary-color);
-        color: #fff;
+        color: #000;
       }
   
       @media screen and (min-width: 2000px) {
         padding: 1rem 2rem;
         border-radius: 0.85rem;
       }
+      
     }
   
     .item-active {
       background-color: var(--secondary-color);
-      color: #fff;
+      color: #000;
     }
   }
   
@@ -54,7 +55,7 @@
       margin: 2rem;
       padding: 1rem;
       border-radius: 0.5rem;
-      background-color: #fff;
+      background-color: var(--darkmode-color);
       color: #000;
   
       cursor: pointer;
@@ -154,7 +155,7 @@
   
       padding: 0.5rem 1rem;
       border-radius: 10px;
-      background-color: #fff;
+      background-color: #8300cf;
       top: -25px;
     }
   }  

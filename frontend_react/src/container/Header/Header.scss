@@ -1,9 +1,5 @@
 #home {
     position: relative;
-    background: url("../../assets/bgIMG.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
   
     // disable the default padding styles
     .app__wrapper {
@@ -63,7 +59,7 @@
     .badge-cmp,
     .tag-cmp {
       padding: 1rem 2rem;
-      background: var(--white-color);
+      background: var(--darkmode-color);
       border-radius: 15px;
       flex-direction: row;
       width: auto;
@@ -72,6 +68,13 @@
 
       &:hover {
         box-shadow: 0 0 25px #7300d1;
+      }
+
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
       }
     }
   
@@ -114,7 +117,7 @@
       height: 100px;
       border-radius: 50%;
   
-      background: var(--white-color);
+      background: var(--darkmode-color);
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   
       img {
@@ -188,7 +191,7 @@
       height: 100px;
       border-radius: 50%;
   
-      background: var(--white-color);
+      background: var(--darkmode-color);
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   
       img {
@@ -252,34 +255,31 @@
     flex: 1;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content:center;
+    align-items:center;
     position: relative;
 
-    img {
-      height: 100%;
-      width: 90%;
-      object-fit: contain;
-      z-index: 1;
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+  
+      background: var(--darkmode-color);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        box-shadow: 0 0 25px #7300d1;
+      }
     }
 
-    .overlay_pic {
-      position: relative;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      padding-right: 100px;    
-    }
-  
-    .overlay_circle {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 0;
-      width: 100%;
-      height: 90%;
+    div:nth-child(1) {
+      width: 400px;
+      height: 400px;
     }
   
     @media screen and (max-width: 1200px) {

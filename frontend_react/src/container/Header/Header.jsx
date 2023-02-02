@@ -37,7 +37,7 @@ const Header = () => (
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
           <span>👋</span>
-          <div style={{ marginLeft: 20 }}>
+          <div style={{ marginLeft: 20}}>
             <p className="p-text">Hi, My Name is</p>
             <h1 className="head-text">Ryan</h1>
           </div>
@@ -74,20 +74,9 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1.5, ease: 'easeInOut' }}
-        src={images.profile}
-        alt="profile_circle"
-        className="overlay_pic"
-      />
-      <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1.5, ease: 'easeInOut' }}
-        src={images.circle}
-        alt="profile_circle"
-        className="overlay_circle"
-      />
+      <div className="circle-cmp app__flex">
+        <img src={images.profile} alt="profile_bg" />
+      </div>
     </motion.div>
 
     <motion.div
@@ -104,4 +93,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, 'home', "app__darkbg");
