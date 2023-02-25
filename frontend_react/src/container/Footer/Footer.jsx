@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { images } from '../../constants';
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '../../client';
-import './Footer.scss';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { images } from "../../constants";
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { client } from "../../client";
+import "./Footer.scss";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -18,16 +22,19 @@ const Footer = () => {
   };
 
   const handleSubmit = () => {
+    if (!username || !email || !message) return;
+
     setLoading(true);
 
     const contact = {
-      _type: 'contact',
+      _type: "contact",
       name: formData.username,
       email: formData.email,
       message: formData.message,
     };
 
-    client.create(contact)
+    client
+      .create(contact)
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
@@ -41,25 +48,57 @@ const Footer = () => {
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
-         <img src={images.linkedin} alt="linkedin" />
-          <a href="https://www.linkedin.com/in/ryan-porper/" target="_blank" rel="noopener noreferrer" className="p-text">LinkedIn</a>
+          <img src={images.linkedin} alt="linkedin" />
+          <a
+            href="https://www.linkedin.com/in/ryan-porper/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-text"
+          >
+            LinkedIn
+          </a>
         </div>
         <div className="app__footer-card ">
-         <img src={images.github} alt="github" />
-          <a href="https://github.com/ryanporper" target="_blank" rel="noopener noreferrer" className="p-text">GitHub</a>
+          <img src={images.github} alt="github" />
+          <a
+            href="https://github.com/ryanporper"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-text"
+          >
+            GitHub
+          </a>
         </div>
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:ryan_porper@aol.com" className="p-text">ryan_porper@aol.com</a>
+          <a href="mailto:ryan_porper@aol.com" className="p-text">
+            ryan_porper@aol.com
+          </a>
         </div>
       </div>
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Name" name="username" value={username} onChange={handleChangeInput} />
+            <input
+              className="p-text"
+              type="text"
+              placeholder="Name"
+              name="username"
+              value={username}
+              onChange={handleChangeInput}
+              required
+            />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Email" name="email" value={email} onChange={handleChangeInput} />
+            <input
+              className="p-text"
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={email}
+              onChange={handleChangeInput}
+              required
+            />
           </div>
           <div>
             <textarea
@@ -68,9 +107,12 @@ const Footer = () => {
               value={message}
               name="message"
               onChange={handleChangeInput}
+              required
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" className="p-text" onClick={handleSubmit}>
+            {!loading ? "Send Message" : "Sending..."}
+          </button>
         </div>
       ) : (
         <div>
@@ -84,6 +126,7 @@ const Footer = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Footer, 'app__footer'),
-  'contact', "app__darkbg"
+  MotionWrap(Footer, "app__footer"),
+  "contact",
+  "app__gradientbg"
 );

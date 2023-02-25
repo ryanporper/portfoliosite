@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-import { AppWrap } from '../../wrapper';
-import { images } from '../../constants';
-import './Header.scss';
+import { AppWrap } from "../../wrapper";
+import { images } from "../../constants";
+import "./Header.scss";
 
 const scaleVariantsRight = {
   whileInView: {
@@ -11,7 +11,7 @@ const scaleVariantsRight = {
     opacity: [0, 1],
     transition: {
       duration: 1.5,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -22,7 +22,7 @@ const scaleVariantsLeft = {
     opacity: [0, 1],
     transition: {
       duration: 1.5,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -37,7 +37,7 @@ const Header = () => (
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
           <span>👋</span>
-          <div style={{ marginLeft: 20}}>
+          <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hi, My Name is</p>
             <h1 className="head-text">Ryan</h1>
           </div>
@@ -46,14 +46,21 @@ const Header = () => (
         <div className="tag-cmp app__flex">
           <p className="bold-text" style={{ marginTop: 10 }}>
             I am a highly motivated software engineer graduate from Coding Dojo.
-            Ever since I was a little kid I had an interest in coding. It all started from me playing videos games. I wondered how I could make one myself, so I googled it
-            and from there on began my journey into programming. After some time of messing with code myself I attended Palm Beach State College where I studied Computer Science to
-            ofically start my career path. After my adventures at PBSC I found Coding Dojo. So I applied for their next cohort and got in! After a intuitive 14 week 3 stack program I 
-            graduated with a certificate in Software Development. Since then I have continued to expand my knowledge with my own research and projects. I work great in a team 
-            environments but I can also do amazing work alone. Very eager to grow and learn new things. Fast learner and can easily adapt to my surroundings.
+            Ever since I was a little kid I had an interest in coding. It all
+            started from me playing videos games. I wondered how I could make
+            one myself, so I googled it and from there on began my journey into
+            programming. After some time of messing with code myself I attended
+            Palm Beach State College where I studied Computer Science to
+            ofically start my career path. After my adventures at PBSC I found
+            Coding Dojo. So I applied for their next cohort and got in! After a
+            intuitive 14 week 3 stack program I graduated with a certificate in
+            Software Development. Since then I have continued to expand my
+            knowledge with my own research and projects. I work great in a team
+            environments but I can also do amazing work alone. Very eager to
+            grow and learn new things. Fast learner and can easily adapt to my
+            surroundings.
           </p>
-        </div>      
-
+        </div>
       </div>
     </motion.div>
 
@@ -70,8 +77,8 @@ const Header = () => (
     </motion.div>
 
     <motion.div
-      whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.5, delayChildren: 0.5 }}
+      whileInView={{ scale: [0, 1] }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
       className="app__header-img"
     >
       <div className="circle-cmp app__flex">
@@ -93,4 +100,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(Header, 'home', "app__darkbg");
+export default AppWrap(Header, "home", "app__gradientbg");

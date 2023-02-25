@@ -15,6 +15,14 @@
   background-color: var(--black-color);
 }
 
+.app__gradientbg {
+  background:linear-gradient(#1D2226, #3b025c, #1D2226)
+}
+
+.app__gradientbg2 {
+  background:linear-gradient(#1D2226, #3b025c, #1D2226)
+}
+
 .app__container {
   width: 100%;
   min-height: 100vh;
